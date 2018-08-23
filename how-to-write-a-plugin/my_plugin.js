@@ -5,4 +5,3 @@ module.exports = function my_plugin(options) {
     reply({ hello: world })
   })
 }
-

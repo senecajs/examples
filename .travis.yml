@@ -9,7 +9,7 @@ env:
   global:
     - TIMEOUT_MULTIPLIER=8
   matrix:
-    - SENECA_VERSION=senecajs/seneca#plugin
+    - SENECA_VERSION=seneca@plugin
     - SENECA_VERSION=senecajs/seneca
 
 
@@ -19,7 +19,6 @@ install:
 
 
 before_script:
-  - echo "SENECA_VERSION:${SENECA_VERSION}";
   - npm uninstall seneca;
   - npm install "$SENECA_VERSION";
 
