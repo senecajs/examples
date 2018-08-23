@@ -12,21 +12,12 @@ env:
     - SENECA_VERSION=seneca@plugin
     - SENECA_VERSION=senecajs/seneca
 
-
-install:
-  - NODE_VERSION=$(node -v); if [ ${NODE_VERSION:1:2} -ge 10 ]; then npm i -g npm@6; npm ci; else npm install; fi
-
-
-
 before_script:
   - npm uninstall seneca;
   - npm install "$SENECA_VERSION";
 
-
 script:
   - npm test
-  - if [ ${NODE_VERSION:1:2} -ge 10 ]; then npm audit; fi
-
 
 cache:
   directories:
