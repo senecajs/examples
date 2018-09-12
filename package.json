@@ -29,6 +29,7 @@
   "dependencies": {
     "code": "5",
     "lab": "16",
-    "seneca": "3"
+    "seneca": "senecajs/seneca",
+    "seneca-echo": "0"
   }
 }

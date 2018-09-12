@@ -9,7 +9,7 @@ env:
   global:
     - TIMEOUT_MULTIPLIER=8
   matrix:
-    - SENECA_VERSION=seneca@plugin
+#    - SENECA_VERSION=seneca@plugin
     - SENECA_VERSION=senecajs/seneca
 
 before_script:
