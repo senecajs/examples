@@ -13,30 +13,30 @@ app.use("/color/:name", function (req, res) {
   let name = req.params.name;
   console.log("NAME", name);
 
-  let code = "#CCCCCC";
+  let code = "#cccccc";
 
-  if('red' === name) {
-    code = '#ff0000'
-  } else if('green' === name) {
-    code = '#00ff00'
-  } else if('blue' === name) {
-    code = '#0000ff'
-  }
+  // if('red' === name) {
+  //   code = '#ff0000'
+  // } else if('green' === name) {
+  //   code = '#00ff00'
+  // } else if('blue' === name) {
+  //   code = '#0000ff'
+  // }
 
   //Using switch statement.
-  // switch (name) {
-  //   case "red":
-  //     code = "#ff0000";
-  //     break;
-  //   case "green":
-  //     code = "#00ff00";
-  //     break;
-  //   case "blue":
-  //     code = "#0000ff";
-  //     break;
-  //   default:
-  //     break;
-  // }
+  switch (name) {
+    case "red":
+      code = "#ff0000";
+      break;
+    case "green":
+      code = "#00ff00";
+      break;
+    case "blue":
+      code = "#0000ff";
+      break;
+    default:
+      break;
+  }
   res.send(code);
 });
 
