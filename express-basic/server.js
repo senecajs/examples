@@ -14,17 +14,13 @@ app.use("/color/:name", function (req, res) {
   console.log("NAME", name.toLocaleLowerCase());
 
   let code = "#cccccc";
-
-  // if('red' === name) {
-  //   code = '#ff0000'
-  // } else if('green' === name) {
-  //   code = '#00ff00'
-  // } else if('blue' === name) {
-  //   code = '#0000ff'
-  // }
-
-  //Using switch statement.
   switch (name) {
+    case "AliceBlue":
+      code = "#f0f8ff";
+      break;
+    case "BurlyWood":
+      code = "#deb887";
+      break;
     case "red":
       code = "#ff0000";
       break;
@@ -35,10 +31,10 @@ app.use("/color/:name", function (req, res) {
       code = "#0000ff";
       break;
     case "ForestGreen":
-      code = "#228B22";
+      code = "#228b22";
       break;
     default:
-      break;
+      console.log(`Sorry, we are out of ${name} color.`);
   }
   res.send(code);
 });
