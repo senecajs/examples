@@ -11,7 +11,7 @@ const app = Express();
 
 app.use("/color/:name", function (req, res) {
   let name = req.params.name;
-  console.log("NAME", name);
+  console.log("NAME", name.toLocaleLowerCase());
 
   let code = "#cccccc";
 
@@ -33,6 +33,9 @@ app.use("/color/:name", function (req, res) {
       break;
     case "blue":
       code = "#0000ff";
+      break;
+    case "ForestGreen":
+      code = "#228B22";
       break;
     default:
       break;
