@@ -22,6 +22,10 @@ app.use('/color/:name', function(req, res) {
   
   if('red' === name) {
     code = '#FF0000'
+  } else if('green' === name) {
+    code = '#00ff00'
+  } else if ('blue' === name) {
+    code = '#0000ff'
   }
 
   res.send(code)
