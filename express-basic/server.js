@@ -16,7 +16,7 @@ app.use("/color/:name", function (req, res) {
   let code = "#CCCCCC";
 
   if('red' === name) {
-    code = '#FF0000'
+    code = '#ff0000'
   } else if('green' === name) {
     code = '#00ff00'
   } else if('blue' === name) {
@@ -26,7 +26,7 @@ app.use("/color/:name", function (req, res) {
   //Using switch statement.
   // switch (name) {
   //   case "red":
-  //     code = "#FF0000";
+  //     code = "#ff0000";
   //     break;
   //   case "green":
   //     code = "#00ff00";
