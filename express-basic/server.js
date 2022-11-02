@@ -3,6 +3,9 @@
 
 const Express = require('express')
 const Seneca = require('seneca')
+const { cdata } = require('./list/utility')
+
+console.log(cdata);
 
 const app = Express()
 
@@ -10,11 +13,11 @@ const app = Express()
 // 1. extend to support red, green, blue - generate PR
 
 app.use('/color/:name', function (req, res) {
-  let name = req.params.name
-  console.log('NAME', name.toLowerCase())
+  let cdata = req.params.name
+  console.log('NAME', cdata);
 
   let code = '#cccccc'
-  switch (name) {
+  switch (cdata) {
     case 'AliceBlue':
       code = '#f0f8ff'
       break
